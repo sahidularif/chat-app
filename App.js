@@ -12,6 +12,12 @@ const firebaseConfig = {
   appId: "1:1008119314507:web:5fda262885593b5d1775ce"
 };
 firebase.initializeApp(firebaseConfig)
+//Firestore & YellowBox setup
+YellowBox.ignoreWarnings(['Setting a timer for a long period of time'])
+
+const db = firebase.firestore()
+const chatsRef = db.collection('chats')
+
 // 
 export default function App() {
   return (
